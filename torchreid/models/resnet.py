@@ -368,7 +368,7 @@ class ResNet(nn.Module):
         elif self.loss == 'triplet':
             return y, v
         else:
-            raise KeyError("Unsupported loss: {}".format(self.loss))
+            return y, v
 
 
 def init_pretrained_weights(model, model_url):
